@@ -10,35 +10,14 @@ class BankAccount {
         customerName = cName;
         customerId = cId;
     }
-
-//    public final void //clrscr() {
-//        try {
-//            try {
-//                final String os = System.getProperty("os.name");
-//
-//                if (os.contains("Windows")) {
-//                    Runtime.getRuntime().exec("cls");
-//                } else {
-//                    Runtime.getRuntime().exec("clear");
-//                }
-//            } catch (final Exception e) {
-//                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-//            }
-//        } catch (final Exception es) {
-//             System.out.println("nothing here!");
-//        }
-//
-//    }
-
+    
     void checkId() {
-        //clrscr();
         System.out.println("Welcome " + customerName);
         System.out.println();
         System.out.print("Please enter the Customer ID: ");
         Scanner id = new Scanner(System.in);
         String chk = id.nextLine();
         if (chk.equals(customerId)) {
-            //clrscr();
             showMenu();
         } else {
             System.out.println("=================================");
@@ -64,7 +43,6 @@ class BankAccount {
             balance = balance - amount;
             prevTransaction = -amount;
         } else {
-            //clrscr();
             System.out.println("=================================");
             System.out.println("Sufficient Balance not available for the withdrawl!");
             System.out.println("=================================");
@@ -83,7 +61,6 @@ class BankAccount {
 
     public void transfer(double amount, BankAccount acc) {
         if (this.balance < amount) {
-            //clrscr();
             System.out.println("=================================");
             System.out.println("Transfer Fails due to insufficient balance!");
             System.out.println("=================================");
@@ -124,7 +101,7 @@ class BankAccount {
                     break;
 
                 case 'B':
-                    //clrscr();
+    
                     System.out.println("================");
                     System.out.println("Enter the amount to deposit");
                     System.out.println("================");
@@ -133,7 +110,7 @@ class BankAccount {
                     break;
 
                 case 'C':
-                    //clrscr();
+
                     System.out.println("================");
                     System.out.println("Enter the amount to withdraw");
                     System.out.println("================");
@@ -142,14 +119,12 @@ class BankAccount {
                     break;
 
                 case 'D':
-                    //clrscr();
                     System.out.println("================");
                     getPrevTransaction();
                     System.out.println("================");
                     break;
 
                 case 'E':
-                    //clrscr();
                     System.out.println("*****");
                     System.out.print("Transfer To ");
                     BankAccount bb = new BankAccount("Aman", "2001");
@@ -162,12 +137,11 @@ class BankAccount {
                     break;
 
                 case 'F':
-                    //clrscr();
                     System.out.println("*****");
                     break;
 
                 default:
-                    //clrscr();
+
                     System.out.println("Invalid Option!!! Please Enter Again");
             }
 
